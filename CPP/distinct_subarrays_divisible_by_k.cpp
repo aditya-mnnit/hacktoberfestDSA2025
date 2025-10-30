@@ -23,8 +23,8 @@ Key Insight:
 
 Complexity:
 -----------------------------------
-Time Complexity: O(N)
-Space Complexity: O(K) or O(N), depending on distinct remainders
+Time Complexity: O(N*log(N))
+Space Complexity: O(K), depending on distinct remainders
 */
 
 #include <bits/stdc++.h>
