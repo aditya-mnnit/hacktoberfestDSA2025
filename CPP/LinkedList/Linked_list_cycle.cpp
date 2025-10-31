@@ -29,6 +29,26 @@ bool hasCycle(Node* head){
     return false;
 }
 
+Node* starting_of_cycle(Node* head){//returns the pointer at the starting of the linked list cycle(ASSUMING THAT THE CYCLE DOES EXIST)
+    if(head == nullptr || head->next == nullptr){
+        return head ;
+    }
+    Node* slow = head;
+    Node* fast = head;
+    while(slow != fast){
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    slow = head ;
+
+    while(slow != fast){
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+
+    return slow ;
+}
+
 int main() {
     Node* one = new Node(1);
     Node* two = new Node(2);
